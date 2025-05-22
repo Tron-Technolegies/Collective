@@ -15,6 +15,9 @@
 .footer-column {
   width: 23%;
 }
+.footer-column img {
+  width: 100px;
+}
 
 .footer-heading {
   font-size: 13px;
@@ -29,7 +32,7 @@
   list-style: none;
   padding: 0;
 }
-.footer-column p{
+.footer-column p {
   margin-top: 6%;
 }
 
@@ -69,6 +72,10 @@
 .left,
 .right {
   font-size: 13px;
+}
+
+.right {
+  width: 50px;
 }
 
 .footer-section p {

@@ -15,11 +15,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-column">
-          <div className="right">
-            Collec<span style={{ color: "red" }}>TIVE</span>
-          </div>
+          <img src="/logo.png" />
           <p>
-          Collective Transportation strive to deliver reliable services with a focus on quality and customer satisfaction.
+            Collective Transportation strive to deliver reliable services with a
+            focus on quality and customer satisfaction.
           </p>
         </div>
 
@@ -38,7 +37,6 @@ const Footer = () => {
           <h4 className="footer-heading">ADDRESS</h4>
           <p>
             <FaPhoneAlt /> 0507559273
-
           </p>
           <p>
             <BsTelephone /> 0543737909
@@ -47,7 +45,8 @@ const Footer = () => {
             <FaEnvelope /> sale@collective.com
           </p>
           <p>
-            <FaMapMarkerAlt />Abudhabi, Al Markaziyah, clocktower building behind wtc souq
+            <FaMapMarkerAlt />
+            Abudhabi, Al Markaziyah, clocktower building behind wtc souq
           </p>
         </div>
 
@@ -66,9 +65,7 @@ const Footer = () => {
           <FaPinterest />
           <FaInstagram />
         </div>
-        <div className="right">
-          MADE BY Collec<span style={{ color: "red" }}>TIVE</span>
-        </div>
+        <img src="/logo.png" className="right" />
       </div>
     </footer>
   );

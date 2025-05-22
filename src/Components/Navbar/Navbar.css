@@ -64,6 +64,10 @@
   align-items: center;
 }
 
+.logo img {
+  width: 120px;
+}
+
 .brand-name {
   font-size: 20px;
   color: black;
