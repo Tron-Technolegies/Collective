@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./About.css";
 import about from "../../assets/about.jpg";
-import { handleChatClick, handleQuoteFormClick } from "../../utils/WhatsApp";
+import { handleChatClick } from "../../utils/WhatsApp"; // Removed handleQuoteFormClick
 
 const About = () => {
   const [formData, setFormData] = useState({
@@ -21,9 +21,17 @@ const About = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    handleQuoteFormClick(formData);
-    
+
+    const { location, destination, contact, message } = formData;
+
+    const subject = encodeURIComponent("Quote Request");
+    const body = encodeURIComponent(
+      `Location: ${location}\nDestination: ${destination}\nContact: ${contact}\nMessage: ${message}`
+    );
+
+    const mailtoLink = `mailto:parvathynair186@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+
     setFormData({
       location: "",
       destination: "",
@@ -38,7 +46,9 @@ const About = () => {
       <div className="about-left">
         <h2>About us</h2>
         <p>
-        We are committed to providing top-notch services with a focus on excellence, reliability, and customer satisfaction. Our mission is to create seamless and efficient solutions tailored to your needs.
+          We are committed to providing top-notch services with a focus on
+          excellence, reliability, and customer satisfaction. Our mission is to
+          create seamless and efficient solutions tailored to your needs.
         </p>
         <img src={about} alt="Truck" className="about-image" />
         <button className="read-button" onClick={handleChatClick}>
@@ -81,7 +91,7 @@ const About = () => {
             onChange={handleInputChange}
           ></textarea>
           <button type="submit" className="quote-button">
-            Get a Quote via WhatsApp
+            Send Quote via Email
           </button>
         </form>
       </div>
