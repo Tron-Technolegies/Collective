@@ -29,7 +29,7 @@ const About = () => {
       `Location: ${location}\nDestination: ${destination}\nContact: ${contact}\nMessage: ${message}`
     );
 
-    const mailtoLink = `mailto:parvathynair186@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:info@collectivetransportations.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
 
     setFormData({
