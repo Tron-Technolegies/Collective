@@ -42,7 +42,7 @@ const Footer = () => {
             <BsTelephone /> 0543737909
           </p>
           <p>
-            <FaEnvelope /> sale@collective.com
+            <FaEnvelope /> Info@collectivetransportations.com
           </p>
           <p>
             <FaMapMarkerAlt />
